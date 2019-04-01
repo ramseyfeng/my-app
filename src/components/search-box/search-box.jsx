@@ -7,7 +7,7 @@ class SearchBox extends Component {
 
     render() {
         return (
-            <div className="input-group col-md-4">
+            <div className="input-group col-lg-6">
                 <input onChange={this.props.onChange}
                     className="form-control py-2 border-right-0 border" type="search" id="example-search-input"/>
                 <span className="input-group-append">

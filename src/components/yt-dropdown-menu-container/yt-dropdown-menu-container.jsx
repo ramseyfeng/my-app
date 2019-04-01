@@ -18,6 +18,8 @@ class YtDropdownMenuContainer extends Component {
         isOpen: false
     };
 
+    componentWillMount
+
     componentDidMount() {
         fetch('https://raw.githubusercontent.com/modood/Administrative-divisions-of-China/master/dist/pcas-code.json')
             .then(function (response) {
@@ -112,7 +114,7 @@ class YtDropdownMenuContainer extends Component {
         return (
             <div className="d-flex flex-column dropdown">
                 <YtDropdownToggle toggleHandler={this.toggleHandler} addrContent={addrContent}/>
-                <div className={(isOpen ? 'show': '') + ' dropdown-menu w-75'}>
+                <div className={(isOpen ? 'show': '') + ' dropdown-menu col-md-7'}>
                     <YtTabs clickTab={this.clickTab} tabs={tabs} hasAdditionalTab={this.hasAdditionalTab} activeTab={activeTab}/>
                     <div className="tab-content m-3">
                         <SearchBox onChange={this.filterAddresses}/>

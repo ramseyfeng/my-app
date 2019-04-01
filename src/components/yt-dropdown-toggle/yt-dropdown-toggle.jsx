@@ -6,9 +6,9 @@ class YtDropdownToggle extends Component {
     render() {
         const {toggleHandler, addrContent} = this.props;
         return (
-            <div type="button" className="btn btn-light dropdown-toggle col-md-4" data-toggle="dropdown" onClick={toggleHandler}>
+            <button type="button" className="btn btn-outline-secondary dropdown-toggle col-md-3 text-truncate" data-toggle="dropdown" onClick={toggleHandler} title={addrContent}>
                 {addrContent}
-            </div>
+            </button>
         );
     }
 
