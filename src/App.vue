@@ -1,36 +1,37 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-        temporary
-        v-model="drawer"
-        :mini-variant="mini"
-        permanent
-        app
-        hide-overlay
-    >
-      <v-list-item class="px-2">
-        <v-btn icon @click.stop="mini = !mini">
-          <v-icon color="blue">{{ mini ? 'mdi-menu' : 'mdi-close' }}</v-icon>
-        </v-btn>
-        <v-list-item-title class="px-2 text-center blue--text font-weight-bold">某市地方医院</v-list-item-title>
-      </v-list-item>
+    <SideBar></SideBar>
+<!--    <v-navigation-drawer-->
+<!--        temporary-->
+<!--        v-model="drawer"-->
+<!--        :mini-variant="mini"-->
+<!--        permanent-->
+<!--        app-->
+<!--        hide-overlay-->
+<!--    >-->
+<!--      <v-list-item class="px-2">-->
+<!--        <v-btn icon @click.stop="mini = !mini">-->
+<!--          <v-icon color="blue">{{ mini ? 'mdi-menu' : 'mdi-close' }}</v-icon>-->
+<!--        </v-btn>-->
+<!--        <v-list-item-title class="px-2 text-center blue&#45;&#45;text font-weight-bold">某市地方医院</v-list-item-title>-->
+<!--      </v-list-item>-->
 
-      <v-list dense>
-        <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+<!--      <v-list dense>-->
+<!--        <v-list-item-->
+<!--            v-for="item in items"-->
+<!--            :key="item.title"-->
+<!--            link-->
+<!--        >-->
+<!--          <v-list-item-icon>-->
+<!--            <v-icon>{{ item.icon }}</v-icon>-->
+<!--          </v-list-item-icon>-->
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+<!--          <v-list-item-content>-->
+<!--            <v-list-item-title>{{ item.title }}</v-list-item-title>-->
+<!--          </v-list-item-content>-->
+<!--        </v-list-item>-->
+<!--      </v-list>-->
+<!--    </v-navigation-drawer>-->
 
     <v-main class="white">
       <div class="wrapper flex-column">
@@ -63,17 +64,19 @@
 </template>
 
 <script>
+import SideBar from "./components/SideBar";
 export default {
+  components: {SideBar},
   data() {
-    return {
-      drawer: true,
-      items: [
-        {title: 'Home', icon: 'mdi-home-city'},
-        {title: 'My Account', icon: 'mdi-account'},
-        {title: 'Users', icon: 'mdi-account-group-outline'},
-      ],
-      mini: true,
-    }
+    // return {
+    //   drawer: true,
+    //   items: [
+    //     {title: 'Home', icon: 'mdi-home-city'},
+    //     {title: 'My Account', icon: 'mdi-account'},
+    //     {title: 'Users', icon: 'mdi-account-group-outline'},
+    //   ],
+    //   mini: true,
+    // }
   },
 }
 </script>
